@@ -1,0 +1,21 @@
+#!/bin/bash
+# 04/02/2014 - Doug Mac Gregor
+# decrypt-me - a script to decrypt files using gpg
+
+FNAME=$1
+
+if [[ -z "$FNAME" ]]; then
+    echo "decrypt-me <name of file>"
+    echo "decrypt-me is a script to decrypt gpg encrypted file and email to you"
+    exit;
+fi
+
+#Does the decrypting
+sudo -u dataload -i /usr/bin/gpg -o /tmp/"${FNAME%.[^.]*}" --passphrase <enter here> /tmp/"$FNAME"
+
+#Does the unzipping
+sudo -u dataload gunzip /tmp/"${FNAME%.[^.]*}"
+
+
+#Does the emailing of the file
+sudo -u dataload mutt -s 'Decrypted File' -i *.dat -a *.dat doug.macgregor@nelnet.net</dev/null
