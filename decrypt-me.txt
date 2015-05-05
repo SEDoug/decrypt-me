@@ -18,4 +18,4 @@ sudo -u dataload gunzip /tmp/"${FNAME%.[^.]*}"
 
 
 #Does the emailing of the file
-sudo -u dataload mutt -s 'Decrypted File' -i *.dat -a *.dat doug.macgregor@nelnet.net</dev/null
+sudo -u dataload mutt -s 'Decrypted File' -i *.dat -a *.dat doug.macgregor@email.net</dev/null
