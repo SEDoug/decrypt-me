@@ -1,2 +1,3 @@
-# decrypt-me
-decrypt-me - a script to decrypt files using gpg
+# decrypt-me: shell script tool
+
+I created a shell script to execute this tool.
