@@ -1,5 +1,5 @@
 #!/bin/bash
-# 04/02/2014 - Doug Mac Gregor
+# 04/02/2014 - SEDoug
 # decrypt-me - a script to decrypt files using gpg
 
 FNAME=$1
@@ -18,4 +18,4 @@ sudo -u dataload gunzip /tmp/"${FNAME%.[^.]*}"
 
 
 #Does the emailing of the file
-sudo -u dataload mutt -s 'Decrypted File' -i *.dat -a *.dat doug.macgregor@email.net</dev/null
+sudo -u dataload mutt -s 'Decrypted File' -i *.dat -a *.dat sedoug@email.net</dev/null
